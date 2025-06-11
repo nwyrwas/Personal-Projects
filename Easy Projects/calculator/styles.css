@@ -1,0 +1,255 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f06, #4a90e2);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+button.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+input.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.calculator.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.display.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+}
+
+#search-bar {
+    margin-top: 10px;
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.nav-buttons {
+    margin-top: 10px;
+}
+
+.nav-btn {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #ddd;
+}
+
+#theme-toggle {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.display {
+    background-color: #222;
+    color: #fff;
+    font-size: 2em;
+    padding: 20px;
+    text-align: right;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.display sup {
+    font-size: 0.5em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    font-size: 1.5em;
+    padding: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+#graph-canvas {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 400px;
+}
+
+footer {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.dark-theme {
+    background-color: #333;
+}
+
+.dark-theme .calculator {
+    background-color: #444;
+}
+
+.dark-theme .display {
+    background-color: #555;
+    color: #eee;
+}
+
+.dark-theme .btn {
+    background-color: #666;
+    color: #fff;
+}
+
+.dark-theme .btn:hover {
+    background-color: #777;
+}
+
+/* Moving Bubbles Background */
+@keyframes moveBubbles {
+    0% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+#background-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Other styles remain the same */
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: moveBubbles 10s linear infinite;
+}
+
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 20%;
+    animation-duration: 15s;
+}
+
+.bubble:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    left: 25%;
+    animation-duration: 10s;
+}
+
+.bubble:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 40%;
+    animation-duration: 18s;
+}
+
+.bubble:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 55%;
+    animation-duration: 14s;
+}
+
+.bubble:nth-child(6) {
+    width: 90px;
+    height: 90px;
+    left: 70%;
+    animation-duration: 20s;
+}
+
+.bubble:nth-child(7) {
+    width: 100px;
+    height: 100px;
+    left: 80%;
+    animation-duration: 22s;
+}
+
+.bubble:nth-child(8) {
+    width: 110px;
+    height: 110px;
+    left: 90%;
+    animation-duration: 25s;
+}

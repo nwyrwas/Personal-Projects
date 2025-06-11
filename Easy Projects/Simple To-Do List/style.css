@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #7f7fd5);
+  height: 100vh;              /* Full viewport height */
+  margin: 0;                  /* Remove default margin */
+  display: flex;
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+  background-size: 800% 800%;
+  animation: gradientShift 15s ease infinite;
+  flex-direction: column;     /* Stack title above app container */
+  color: white;               /* For title text */
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Title for the app */
+.title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;        /* Space between title and app */
+  opacity: 0;
+  animation: fadeInText 3s ease forwards 1s;
+  text-shadow: 0 0 15px rgba(255,255,255,0.8), 0 0 30px rgba(255,255,255,0.5);
+}
+
+/* Text fade-in animation */
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+.app {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 400px;
+  max-width: 90vw;            /* Responsive width */
+  color: black;               /* Text color inside the app */
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+}
+
+
+
+#add-task {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#clear-tasks {
+  margin-top: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+#clear-tasks:hover {
+  background-color: #e04343;
+}
+
+/* Style the list items */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Focus styles for accessibility */
+input:focus, button:focus {
+  outline: 3px solid #86a8e7;
+  outline-offset: 2px;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;               /* Behind everything */
+  pointer-events: none;      /* So it doesn’t block clicks */
+}
+
+.footer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+}

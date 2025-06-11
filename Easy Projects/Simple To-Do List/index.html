@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated fading title above your app -->
+  <div class="title">Nick's To-Do App</div>
+
+  <div class="app">
+    <h1>Practice To-Do App</h1>
+
+    <div class="input-group">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="Add a new task"
+        aria-label="Task input"
+      />
+      <button id="add-task" aria-label="Add task button">Add Task</button>
+    </div>
+
+    <ul id="task-list">
+      <!-- Tasks will be added here dynamically -->
+    </ul>
+
+    <button id="clear-tasks" aria-label="Clear all tasks button">Clear All Tasks</button>
+
+    <canvas id="background"></canvas>
+
+    <div class="footer">
+      <p>Made with ❤️ by Nick</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

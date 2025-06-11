@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Nick's Calculator</h1>
+        <input type="text" id="search-bar" placeholder="Search...">
+        <div class="nav-buttons">
+            <button class="nav-btn">Menu</button>
+            <button class="nav-btn" onclick="changeMode()">Mode Change</button>
+            <button class="nav-btn">About</button>
+        </div>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+    <div class="calculator" id="calculator">
+        <div class="display" id="display"></div>
+        <div class="buttons" id="basic-buttons">
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn" onclick="chooseOperation('+')">+</button>
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn" onclick="chooseOperation('-')">-</button>
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn" onclick="chooseOperation('*')">*</button>
+            <button class="btn" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="compute()">=</button>
+            <button class="btn" onclick="chooseOperation('/')">/</button>
+        </div>
+        <div class="buttons" id="calculus-buttons" style="display: none;">
+            <input type="text" id="calculus-input" placeholder="Enter function (e.g., x^2)">
+            <button class="btn" onclick="differentiate()">d/dx</button>
+            <button class="btn" onclick="integrate()">∫</button>
+            <button class="btn" onclick="plotGraph()">Graph</button>
+        </div>
+        <canvas id="graph-canvas" style="display: none;"></canvas>
+    </div>
+    <footer>
+        <p>&copy; 2023 Simple Calculator</p>
+    </footer>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <script src="calculator.js"></script>
+</body>
+</html>
